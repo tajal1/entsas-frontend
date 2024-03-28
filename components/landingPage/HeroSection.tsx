@@ -17,7 +17,7 @@ const HeroSection = ({
   buttonTextTwo,
 }: HeroSectionType) => {
   return (
-    <div className=" h-[calc(100vh-70px)] w-full relative bg-red-100 group">
+    <div className=" h-[calc(100vh-70px)] w-full relative group">
       <Image
         src="/images/heroImg.jpg"
         alt="Hero Image"
