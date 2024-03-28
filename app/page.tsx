@@ -29,6 +29,7 @@ export default function Home() {
   return (
     <main className="h-full w-full">
       <HeroSection
+        img="/images/heroImg.jpg"
         category="MEN"
         title="Spring Collection 2024"
         buttonTextOne={"Discover the Collection"}
@@ -46,6 +47,24 @@ export default function Home() {
           );
         })}
       </div>
+      <HeroSection
+        img="/images/demoImg1.jpg"
+        category="WOMEN"
+        title="Nautical"
+        buttonTextOne={"Discover the Collection"}
+      />
+      <HeroSection
+        img="/images/demoImg2.jpg"
+        category="FINE JEWELRY"
+        title="Color Blossom"
+        buttonTextOne={"Shop the Collection"}
+        buttonTextTwo={"Explore the Campaign"}
+      />
+      <HeroSection
+        img="/images/demoImg3.jpg"
+        title="Louis Vuitton Service"
+        buttonTextOne={"Discover"}
+      />
     </main>
   );
 }
