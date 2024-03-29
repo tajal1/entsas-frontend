@@ -30,21 +30,21 @@ const MenuDrawer = (props: MenuDrawerProps) => {
             <AlignJustify size={20} strokeWidth={1.5} /> <p>Menu</p>
           </div>
         </DrawerTrigger>
-        <DrawerContent className="h-full w-1/4">
-          <div className="p-8 space-y-8">
+        <DrawerContent className="h-full w-1/4 ">
             <DrawerClose>
               <div
                 onClick={() => {
                   setOpenSubMenu(null);
                   setOpenLastMenu(null);
                 }}
-                className="flex justify-start gap-3 items-center"
+                className="flex justify-start gap-3 items-center p-8"
               >
                 <X size={20} strokeWidth={1.5} />{" "}
                 <p className="text-sm">Close</p>
               </div>
             </DrawerClose>
-            <div className="space-y-3 text-xl">
+          <div className="p-8 space-y-8 h-[75%] overflow-y-scroll overflow-x-hidden">
+            <div className="space-y-3 text-xl ">
               {data.map((item, idx) => (
                 <div key={idx + item.id} className="group">
                   <div
@@ -118,8 +118,11 @@ const MenuDrawer = (props: MenuDrawerProps) => {
             </div>
           </div>
           <div className="p-8 space-y-2 border-t text-sm">
-            <p className="">Need Help</p>
-            <p className="">Need Help</p>
+            <p className=" cursor-pointer">Sustainability</p>
+            <p className=" cursor-pointer">Find a Store</p>
+            <p className="cursor-pointer">Ship: United States</p>
+            <p className="cursor-pointer">Can we help you?</p>
+            <p className="cursor-pointer">+1.866.VUITTON</p>
           </div>
         </DrawerContent>
       </Drawer>
