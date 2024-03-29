@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={intrepid.className}>
         <NavBar />
         {children}
-        <div className="p-6">
+        <div className="">
           <Footer />
         </div>
       </body>
