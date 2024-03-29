@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="py-10">
-      <div className="w-[90%] mx-auto grid grid-cols-4 gap-7">
+      <div className="w-[90%] mx-auto grid md:grid-cols-4 grid-cols-2 gap-7">
         <div>
           <p className="text-[.625rem] mb-6">HELP</p>
           <div className="text-[.875rem] flex flex-col gap-5">
@@ -100,7 +100,7 @@ const Footer = () => {
       <hr className="my-10" />
 
       <div className="w-[90%] mx-auto">
-        <div className="flex justify-between text-[.875rem]">
+        <div className="flex justify-between lg:flex-row flex-col-reverse items-center gap-5 text-[.875rem]">
           <div>
             <p className="flex gap-2">
               <span>Ship to: </span>
@@ -126,7 +126,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-center font-extrabold mt-10 text-[24px]">LOUIS VUITTON</p>
+      <p className="text-center font-extrabold mt-10 text-[24px]">
+        LOUIS VUITTON
+      </p>
     </div>
   );
 };
