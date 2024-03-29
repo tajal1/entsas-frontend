@@ -24,7 +24,9 @@ const NavBar = (props: Props) => {
   return (
     <div
       className={`${
-        scrollPosition > 80 ? "bg-white" : "bg-transparent hover:bg-white"
+        scrollPosition > 80
+          ? "bg-white border-b-2 border-gray-200"
+          : "bg-transparent hover:bg-white "
       }  fixed z-10  h-20  content-center w-full grid grid-cols-3 px-12 `}
     >
       <div className="flex items-center gap-6 justify-start">
