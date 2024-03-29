@@ -1,9 +1,10 @@
 "use client";
 
-import { AlignJustify, Search, ShoppingBag, User } from "lucide-react";
+import { AlignJustify, Search, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import CallUsDrawer from "./CallUsDrawer";
+import LoginDrawer from "./LoginDrawer";
 
 type Props = {};
 
@@ -55,7 +56,7 @@ const NavBar = (props: Props) => {
         </div>
         <p className=" cursor-pointer">Wishlist</p>
         <div className=" cursor-pointer">
-          <User size={20} strokeWidth={1.5} />
+          <LoginDrawer />
         </div>
         <div className=" cursor-pointer relative ">
           <ShoppingBag size={20} strokeWidth={1.5} />
