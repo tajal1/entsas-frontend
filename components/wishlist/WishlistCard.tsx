@@ -104,7 +104,7 @@ const WishlistCard = (item: Props) => {
 
         <p>{item.title}</p>
         <p>
-          <span>{item.currency}</span> {item.price.toLocaleString()}
+          <span>{item.currency}</span> {item.price?.toLocaleString()}
         </p>
       </div>
     </>
