@@ -8,7 +8,7 @@ import {
 import { useAppStore } from "@/service/store";
 import { Heart } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = { mediaList: any; title: string; currency: string; price: number };
 
@@ -18,18 +18,17 @@ const CollectionCard = (item: Props) => {
   const globalIsLove = useAppStore((state) => state.isLove);
   const setGlobalIsLove = useAppStore((state) => state.setIsLove);
 
-  const toggleLove = () => {
-    setIsLove((prevIsLove) => !prevIsLove);
+  useEffect(() => {
     setGlobalIsLove(isLove);
-  };
+  }, [isLove]);
 
-  console.log(isLove); 
   console.log(globalIsLove);
+  console.log(isLove);
 
   return (
     <div className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative">
       <Heart
-        onClick={toggleLove}
+        onClick={() => setIsLove((prevIsLove) => !prevIsLove)}
         size={20}
         fill={isLove ? "black" : "transparent"}
         strokeWidth={1.5}
