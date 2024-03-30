@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useAppStore } from "@/service/store";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,11 +14,22 @@ type Props = { mediaList: any; title: string; currency: string; price: number };
 
 const CollectionCard = (item: Props) => {
   const [isLove, setIsLove] = useState(false);
-//   console.log(isLove);
+
+  const globalIsLove = useAppStore((state) => state.isLove);
+  const setGlobalIsLove = useAppStore((state) => state.setIsLove);
+
+  const toggleLove = () => {
+    setIsLove((prevIsLove) => !prevIsLove);
+    setGlobalIsLove(isLove);
+  };
+
+  console.log(isLove); 
+  console.log(globalIsLove);
+
   return (
     <div className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative">
       <Heart
-        onClick={() => setIsLove((oldVal) => !oldVal)}
+        onClick={toggleLove}
         size={20}
         fill={isLove ? "black" : "transparent"}
         strokeWidth={1.5}
