@@ -25,6 +25,7 @@ type CollectionCardProps = {
   currency: string;
   price: number;
   index: number;
+  productsDetails: any;
 };
 
 const CollectionCard = (props: CollectionCardProps) => {
@@ -40,12 +41,22 @@ const CollectionCard = (props: CollectionCardProps) => {
     setGlobalIsLove(true);
     const updatedWishlist = [...wishlist, item];
     setWishlist(updatedWishlist);
-    setShowDialog( true);
+    setShowDialog(true);
+  };
+
+  const setSelectedProduct = useAppStore((state) => state.setSelectedProduct);
+
+  const handleClick = () => {
+    setSelectedProduct(props.productsDetails);
   };
 
   return (
     <>
-      <div className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative">
+      <div
+        onClick={handleClick}
+        onContextMenu={(e) => e.preventDefault()}
+        className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative"
+      >
         <Heart
           onClick={() => handleItemClick(props)}
           size={20}
