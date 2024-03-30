@@ -7,14 +7,10 @@ import {
 } from "@/components/ui/carousel";
 import {
   AlertDialog,
-  AlertDialogAction,
+  AlertDialogHeader,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
 import { useAppStore } from "@/service/store";
@@ -30,24 +26,29 @@ const CollectionCard = (item: Props) => {
 
   const globalIsLove = useAppStore((state) => state.isLove);
   const setGlobalIsLove = useAppStore((state) => state.setIsLove);
+  const { wishlist, setWishlist } = useAppStore();
+
+  const handleItemClick = (item: Props) => {
+    const updatedWishlist = [...wishlist, item];
+    setWishlist(updatedWishlist);
+  };
 
   useEffect(() => {
     setGlobalIsLove(isLove);
   }, [isLove]);
 
-  console.log("global is love", globalIsLove);
-  console.log("is love", isLove);
-
   return (
     <>
       <AlertDialog open={globalIsLove} onOpenChange={setGlobalIsLove}>
         <AlertDialogContent className="flex justify-between">
-          <AlertDialogDescription className="text-black">
-            This Item has been added to your wishlist <br />{" "}
-            <span className="underline">
-              <Link href="/wishlist">Access Your Wishlist</Link>
-            </span>
-          </AlertDialogDescription>
+          <AlertDialogHeader>
+            <AlertDialogDescription className="text-black">
+              This Item has been added to your wishlist <br />{" "}
+              <span className="underline">
+                <Link href="/wishlist">Access Your Wishlist</Link>
+              </span>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
           <AlertDialogCancel className="border-none">
             <X />
           </AlertDialogCancel>
@@ -56,7 +57,10 @@ const CollectionCard = (item: Props) => {
 
       <div className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative">
         <Heart
-          onClick={() => setIsLove((prevIsLove) => !prevIsLove)}
+          onClick={() => {
+            setIsLove((prevIsLove) => !prevIsLove);
+            handleItemClick(item);
+          }}
           size={20}
           fill={isLove ? "black" : "transparent"}
           strokeWidth={1.5}
