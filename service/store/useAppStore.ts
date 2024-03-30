@@ -4,6 +4,9 @@ import { persist } from "zustand/middleware";
 interface useAppStoreState {
   isLove: any;
   setIsLove: (by: boolean) => void;
+
+  wishlist: any[];
+  setWishlist: (wishlist: any[]) => void;
 }
 
 const useAppStore = create<useAppStoreState>()(
@@ -11,6 +14,9 @@ const useAppStore = create<useAppStoreState>()(
     (set) => ({
       isLove: false,
       setIsLove: (by) => set({ isLove: by }),
+
+      wishlist: [],
+      setWishlist: (wishlist) => set({ wishlist }),
     }),
     {
       name: "web-storage",
