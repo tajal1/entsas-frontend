@@ -7,6 +7,9 @@ interface useAppStoreState {
 
   wishlist: any[];
   setWishlist: (wishlist: any[]) => void;
+
+  selectedProduct: any;
+  setSelectedProduct: (product: any) => void;
 }
 
 const useAppStore = create<useAppStoreState>()(
@@ -17,7 +20,11 @@ const useAppStore = create<useAppStoreState>()(
 
       wishlist: [],
       setWishlist: (wishlist) => set({ wishlist }),
+
+      selectedProduct: null,
+      setSelectedProduct: (product: any) => set({ selectedProduct: product }),
     }),
+
     {
       name: "web-storage",
     }

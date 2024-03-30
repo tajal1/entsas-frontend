@@ -1,18 +1,19 @@
 "use client";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerTrigger,
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerFooter,
+    DrawerTrigger,
 } from "@/components/ui/drawer";
 import { SlidersHorizontal, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { mens } from "../../public/json/ProductsData.json";
 import { Button } from "../ui/button";
@@ -67,6 +68,8 @@ const CollectionsContainer = (props: Props) => {
       setCollectionType(mens[0]?.collectionType);
     }
   }, []);
+    
+  
 
   return (
     <div className="pt-20">
@@ -136,8 +139,19 @@ const CollectionsContainer = (props: Props) => {
         </Drawer>
       </div>
       <div className="grid grid-cols-4 gap-5 px-8 bg-gray-100 pt-20 pb-8">
-        {mens.map((item: any, idx) => (
-          <CollectionCard {...item} key={item.id + idx} />
+        {mens.map((item: any, idx: number) => (
+          // <Link href={`/collections/${item.id + item.title}`} key={item.id}>
+            <CollectionCard
+              key={item.id}
+              index={item.id}
+              id={idx}
+              price={item.price}
+              currency={item.currency}
+              mediaList={item.mediaList}
+              title={item.title}
+              productsDetails={item}
+            />
+          // </Link>
         ))}
       </div>
     </div>
