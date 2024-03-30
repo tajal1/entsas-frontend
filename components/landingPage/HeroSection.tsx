@@ -26,7 +26,7 @@ const HeroSection = ({
         <p className="text-3xl truncate">{title ?? ""}</p>
         <div className="flex gap-4 h-20 pt-4 ">
           {buttonTextOne && (
-            <Link href={"/"}>
+            <Link href={"/collections"}>
               <Button
                 variant="outline"
                 className="backdrop-blur-sm bg-black/30 rounded-full  px-14 py-6  group-hover:border-2"
