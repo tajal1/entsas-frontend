@@ -1,0 +1,178 @@
+{
+  "mens": [
+    {
+      "id": 0,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    },
+    {
+      "id": 1,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    },
+    {
+      "id": 2,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    },
+    {
+      "id": 3,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    },
+    {
+      "id": 4,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    },
+    {
+      "id": 5,
+      "title": "Cotton Aviator Jacket With Monogram",
+      "price": 3300,
+      "currency": "$",
+      "description": "",
+      "collectionType": "Spring2024",
+      "gender": "Men",
+      "productType": "Pant",
+      "productCode": "M47070",
+      "stock": 100,
+      "mediaList": [
+        { "id": 0, "src": "/images/demoPant.png", "isVideo": false },
+        { "id": 1, "src": "/images/cardImg.jpg", "isVideo": false }
+      ],
+      "sizeList": [
+        { "id": 0, "size": 38 },
+        { "id": 1, "size": 40 },
+        { "id": 2, "size": 42 },
+        { "id": 3, "size": 44 },
+        { "id": 4, "size": 46 }
+      ],
+      "colorList": [
+        { "id": 0, "colorCode": "#154360" },
+        { "id": 1, "colorCode": "#4A235A" },
+        { "id": 2, "colorCode": "#78281F" }
+      ],
+      "isBanner": false
+    }
+  ]
+}
