@@ -136,8 +136,15 @@ const CollectionsContainer = (props: Props) => {
         </Drawer>
       </div>
       <div className="grid grid-cols-4 gap-5 px-8 bg-gray-100 pt-20 pb-8">
-        {mens.map((item: any, idx) => (
-          <CollectionCard {...item} key={item.id + idx} />
+        {mens.map((item: any, idx: number) => (
+          <CollectionCard
+            key={item.id}
+            index={idx}
+            price={item.price}
+            currency={item.currency}
+            mediaList={item.mediaList}
+            title={item.title}
+          />
         ))}
       </div>
     </div>
