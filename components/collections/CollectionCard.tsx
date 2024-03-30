@@ -17,7 +17,7 @@ import { useAppStore } from "@/service/store";
 import { Heart, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type CollectionCardProps = {
   mediaList: any;
@@ -35,18 +35,12 @@ const CollectionCard = (props: CollectionCardProps) => {
   const setGlobalIsLove = useAppStore((state) => state.setIsLove);
   const { wishlist, setWishlist } = useAppStore();
 
-  useEffect(() => {
-    if (wishlist.includes(props.index)) {
-      setShowDialog(true);
-    }
-  }, [wishlist, props.index]);
-
   const handleItemClick = (item: CollectionCardProps) => {
     setIsLove((prevIsLove) => !prevIsLove);
     setGlobalIsLove(true);
     const updatedWishlist = [...wishlist, item];
     setWishlist(updatedWishlist);
-    setShowDialog(true);
+    setShowDialog( true);
   };
 
   return (
@@ -102,7 +96,10 @@ const CollectionCard = (props: CollectionCardProps) => {
           <AlertDialogContent className="flex justify-between">
             <AlertDialogHeader>
               <AlertDialogDescription className="text-black">
-                This Item has been added to your wishlist <br />{" "}
+                {`This Item has been ${
+                  isLove ? "added to" : "removed from"
+                } your wishlist`}{" "}
+                <br />{" "}
                 <span className="underline">
                   <Link href="/wishlist">Access Your Wishlist</Link>
                 </span>
