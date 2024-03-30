@@ -6,7 +6,7 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="py-20 px-6 bg-gray-100">
+    <div className="pb-20 bg-white">
       <CollectionsContainer />
     </div>
   );

@@ -6,7 +6,7 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
       "productType": "Pant",
       "productCode": "M47070",
@@ -35,9 +35,9 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
-      "productType": "Pant",
+      "productType": "Shirt",
       "productCode": "M47070",
       "stock": 100,
       "mediaList": [
@@ -64,9 +64,9 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
-      "productType": "Pant",
+      "productType": "Bag",
       "productCode": "M47070",
       "stock": 100,
       "mediaList": [
@@ -93,9 +93,9 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
-      "productType": "Pant",
+      "productType": "Shoes",
       "productCode": "M47070",
       "stock": 100,
       "mediaList": [
@@ -112,7 +112,7 @@
       "colorList": [
         { "id": 0, "colorCode": "#154360" },
         { "id": 1, "colorCode": "#4A235A" },
-        { "id": 2, "colorCode": "#78281F" }
+        { "id": 2, "colorCode": "#78288B" }
       ],
       "isBanner": false
     },
@@ -122,7 +122,7 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
       "productType": "Pant",
       "productCode": "M47070",
@@ -151,7 +151,7 @@
       "price": 3300,
       "currency": "$",
       "description": "",
-      "collectionType": "Spring2024",
+      "collectionType": "Spring Collection 2024",
       "gender": "Men",
       "productType": "Pant",
       "productCode": "M47070",
