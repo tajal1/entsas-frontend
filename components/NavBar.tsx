@@ -34,7 +34,7 @@ const NavBar = (props: Props) => {
       }  fixed z-30  h-20  content-center w-full grid grid-cols-3 px-12 `}
     >
       <div className="flex items-center gap-6 justify-start">
-        <MenuDrawer/>
+        <MenuDrawer />
         <div className=" cursor-pointer flex gap-2 items-center">
           <Search size={20} strokeWidth={1.5} />
           <p>Search</p>
@@ -57,12 +57,14 @@ const NavBar = (props: Props) => {
         <div className=" cursor-pointer">
           <LoginDrawer />
         </div>
-        <div className=" cursor-pointer relative ">
-          <ShoppingBag size={20} strokeWidth={1.5} />
-          <p className="bg-black w-3.5 h-3.5 absolute -top-2 -right-4 rounded-full text-white text-center text-[10px] flex justify-center">
-            0
-          </p>
-        </div>
+        <Link href={"/cart"}>
+          <div className=" cursor-pointer relative ">
+            <ShoppingBag size={20} strokeWidth={1.5} />
+            <p className="bg-black w-3.5 h-3.5 absolute -top-2 -right-4 rounded-full text-white text-center text-[10px] flex justify-center">
+              0
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );
