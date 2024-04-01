@@ -140,16 +140,18 @@ const CollectionsContainer = (props: Props) => {
       </div>
       <div className="grid grid-cols-4 gap-5 px-8 bg-gray-100 pt-20 pb-8">
         {mens.map((item: any, idx: number) => (
-          <Link href={`/collections/${item.id + item.title}`} key={item.id}>
+          // <Link href={`/collections/${item.id + item.title}`} key={item.id}>
             <CollectionCard
-              index={idx}
+              key={item.id}
+              index={item.id}
+              id={idx}
               price={item.price}
               currency={item.currency}
               mediaList={item.mediaList}
               title={item.title}
               productsDetails={item}
             />
-          </Link>
+          // </Link>
         ))}
       </div>
     </div>

@@ -17,6 +17,7 @@ import { useAppStore } from "@/service/store";
 import { Heart, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type CollectionCardProps = {
@@ -25,6 +26,7 @@ type CollectionCardProps = {
   currency: string;
   price: number;
   index: number;
+  id: number;
   productsDetails: any;
 };
 
@@ -35,6 +37,7 @@ const CollectionCard = (props: CollectionCardProps) => {
   const globalIsLove = useAppStore((state) => state.isLove);
   const setGlobalIsLove = useAppStore((state) => state.setIsLove);
   const { wishlist, setWishlist } = useAppStore();
+  const router = useRouter();
 
   const handleItemClick = (item: CollectionCardProps) => {
     setIsLove((prevIsLove) => !prevIsLove);
@@ -48,14 +51,14 @@ const CollectionCard = (props: CollectionCardProps) => {
 
   const handleClick = () => {
     setSelectedProduct(props.productsDetails);
+    router.push(`/collections/${props.id + props.title}`);
   };
 
   return (
     <>
       <div
-        onClick={handleClick}
         onContextMenu={(e) => e.preventDefault()}
-        className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative"
+        className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative cursor-pointer"
       >
         <Heart
           onClick={() => handleItemClick(props)}
@@ -69,6 +72,7 @@ const CollectionCard = (props: CollectionCardProps) => {
             align: "start",
             loop: true,
           }}
+          onClick={handleClick}
         >
           <CarouselContent className="group">
             {props.mediaList.map((media: any, mediaIdx: number) => (
@@ -88,11 +92,12 @@ const CollectionCard = (props: CollectionCardProps) => {
           <CarouselPrevious className="left-5 bg-transparent border-none " />
           <CarouselNext className="right-5 bg-transparent border-none " />
         </Carousel>
-
-        <p>{props.title}</p>
-        <p>
-          <span>{props.currency}</span> {props.price.toLocaleString()}
-        </p>
+        <div onClick={handleClick} className=" cursor-pointer">
+          <p>{props.title}</p>
+          <p>
+            <span>{props.currency}</span> {props.price.toLocaleString()}
+          </p>
+        </div>
       </div>
 
       {showDialog && (
