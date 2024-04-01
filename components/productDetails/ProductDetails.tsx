@@ -19,17 +19,22 @@ import { ChevronRight, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 
 const ProductDetails = (props: Props) => {
   const [productDetails, setProductDetails]: any = useState({});
   const selectedProduct = useAppStore((state) => state.selectedProduct);
+
+  const setSelectedProduct = useAppStore((state) => state.setSelectedProduct);
+  const router = useRouter();
+
   useEffect(() => {
     setProductDetails(selectedProduct);
   }, [selectedProduct]);
 
-  console.log(productDetails);
+  // console.log(productDetails);
 
   return (
     <div className="grid grid-cols-2 h-full w-full">
@@ -196,7 +201,13 @@ const ProductDetails = (props: Props) => {
                   </div>
                 </div>
                 <DrawerFooter className="px-20">
-                  <Button className="w-full rounded-full py-6">
+                  <Button
+                    onClick={() => {
+                      setSelectedProduct(productDetails);
+                      router.push(`/cart`);
+                    }}
+                    className="w-full rounded-full py-6"
+                  >
                     View my Cart
                   </Button>
                   <DrawerClose>
