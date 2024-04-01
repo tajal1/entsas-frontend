@@ -110,13 +110,14 @@ const CartContainer = (props: Props) => {
               </p>
             </div>
           </div>
-              </div>
-              <div className="flex justify-end py-5">
-                  
-        <Button className="w-fit self-end place-self-end px-12 rounded-full py-6">
-          Proceed to checkout
-        </Button>
-              </div>
+        </div>
+        <div className="flex justify-end py-5">
+          <Link href={"/checkout"}>
+            <Button className="w-fit self-end place-self-end px-12 rounded-full py-6">
+              Proceed to checkout
+            </Button>
+          </Link>
+        </div>
       </div>
       <div className=" bg-white py-20  col-span-4">
         <div className="py-8 px-12 space-y-6 border-b">
@@ -139,9 +140,11 @@ const CartContainer = (props: Props) => {
           </p>
           <div className=" space-y-2">
             {" "}
-            <Button className="w-full rounded-full py-6">
-              Proceed to checkout
-            </Button>
+            <Link href={"/checkout"}>
+              <Button className="w-full rounded-full py-6">
+                Proceed to checkout
+              </Button>
+            </Link>
             <Button className="w-full rounded-full py-6 bg-gradient-to-r from-[#253B80] to-[#179BD7]">
               <Image
                 src={"/icons/ppcom.svg"}
