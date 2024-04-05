@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import CallUsDrawer from "./CallUsDrawer";
 import LoginDrawer from "./LoginDrawer";
 import MenuDrawer from "./MenuDrawer";
+import Image from "next/image";
 
 type Props = {};
 
@@ -44,9 +45,12 @@ const NavBar = (props: Props) => {
 
         <div className="flex items-center justify-center">
           <Link href={"/"}>
-            <p className="md:text-3xl font-bold tracking-widest cursor-pointer truncate">
-              LOUIS VUITTON
-            </p>
+            <div className="md:text-3xl font-bold tracking-widest cursor-pointer truncate items-center flex justify-center h-full">
+              {/* <div className="h-full w-fit"> */}
+              <Image src="/logo.svg" alt="Logo" height={120} width={120} />
+              {/* </div> */}
+              {/* <p>Entsas</p> */}
+            </div>
           </Link>
         </div>
 
