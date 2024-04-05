@@ -34,7 +34,7 @@ export default function Home() {
         title="Spring Collection 2024"
         buttonTextOne={"Discover the Collection"}
       />
-      <div className="p-6 flex gap-5 flex-nowrap w-full h-full">
+      <div className="p-6 flex flex-col lg:flex-row gap-5 md:flex-nowrap w-full h-full md:h-[400px] xl:h-full">
         {cardDataList.map((item, i) => {
           return (
             <LandingPageCard
