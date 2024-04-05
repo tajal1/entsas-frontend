@@ -58,7 +58,7 @@ const CollectionCard = (props: CollectionCardProps) => {
     <>
       <div
         onContextMenu={(e) => e.preventDefault()}
-        className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative cursor-pointer"
+        className=" col-span-4 md:col-span-2 lg:col-span-1 space-y-3 overflow-hidden gap-4 h-80 w-full relative cursor-pointer"
       >
         <Heart
           onClick={() => handleItemClick(props)}
@@ -109,7 +109,7 @@ const CollectionCard = (props: CollectionCardProps) => {
             }
           }}
         >
-          <AlertDialogContent className="flex justify-between">
+          <AlertDialogContent className="flex justify-between w-5/6 lg:w-full">
             <AlertDialogHeader>
               <AlertDialogDescription className="text-black">
                 {`This Item has been ${

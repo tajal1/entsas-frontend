@@ -8,7 +8,7 @@ type Props = {};
 const WishlistContainer = (props: Props) => {
   const { wishlist } = useAppStore();
 
-  console.log("wishlist", wishlist);
+  // console.log("wishlist", wishlist);
 
   return (
     <div className="grid grid-cols-4 gap-5">
