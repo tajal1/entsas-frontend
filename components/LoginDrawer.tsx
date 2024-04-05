@@ -20,8 +20,8 @@ const LoginDrawer = (props: LoginDrawerProps) => {
           {" "}
           <User size={20} strokeWidth={1.5} />
         </DrawerTrigger>
-        <DrawerContent className="h-full mt-0 w-2/4 inset-y-0 inset-x-auto right-0 overflow-y-scroll overflow-x-hidden">
-          <div className="px-28 pt-28 pb-14 space-y-8">
+        <DrawerContent className="h-full mt-0 w-full lg:w-2/4 inset-y-0 inset-x-auto right-0 overflow-y-scroll overflow-x-hidden">
+          <div className="px-10 lg:px-28 pt-10 lg:pt-28 pb-14 space-y-8">
             <div className="flex justify-between items-center">
               <p className="text-lg">Identification</p>
               <DrawerClose>

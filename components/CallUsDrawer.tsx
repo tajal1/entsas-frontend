@@ -13,8 +13,8 @@ const CallUsDrawer = (props: CallUsDrawerProps) => {
     <div>
       <Drawer direction="right">
         <DrawerTrigger>Call Us</DrawerTrigger>
-        <DrawerContent className="h-full mt-0 w-2/4 inset-y-0 inset-x-auto right-0">
-          <div className="p-28 space-y-8">
+        <DrawerContent className="h-full mt-0 w-full lg:w-2/4 inset-y-0 inset-x-auto right-0">
+          <div className="p-10 lg:p-28 space-y-8">
             <div className="flex justify-between items-center">
               <p className="text-lg">Call Us</p>
               <DrawerClose>

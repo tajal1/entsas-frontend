@@ -38,7 +38,7 @@ const ProductDetails = (props: Props) => {
 
   return (
     <div className="grid grid-cols-2 h-full w-full">
-      <div>
+      <div className="col-span-2 lg:col-span-1">
         {productDetails?.id && (
           <Carousel
             opts={{
@@ -49,7 +49,8 @@ const ProductDetails = (props: Props) => {
             <CarouselContent className="group">
               {productDetails.mediaList.map((media: any, mediaIdx: number) => (
                 <CarouselItem
-                  className=" bg-gradient-to-tl from-gray-100 via-gray-100 to-gray-200 flex justify-center items-center relative w-full h-screen "
+                  className=" bg-gradient-to-tl from-gray-100 via-gray-100 to-gray-200 flex justify-center items-center relative w-full 
+                  h-[500px] lg:h-screen "
                   key={mediaIdx}
                 >
                   <Image
@@ -67,7 +68,7 @@ const ProductDetails = (props: Props) => {
         )}
       </div>
       {productDetails?.id && (
-        <div className="bg-white py-32 flex justify-center items-center">
+        <div className="bg-white py-10 lg:py-32 flex col-span-2 lg:col-span-1 justify-center items-center">
           <div className=" w-80 h-fit flex flex-col gap-6">
             <div className=" space-y-2">
               <p className="text-xs">{productDetails?.productCode ?? ""}</p>
@@ -85,8 +86,8 @@ const ProductDetails = (props: Props) => {
                   <p>Color</p> <ChevronRight size={20} strokeWidth={1.5} />
                 </div>
               </DrawerTrigger>
-              <DrawerContent className="h-full mt-0 w-2/4 inset-y-0 inset-x-auto right-0">
-                <div className="p-28 space-y-8">
+              <DrawerContent className="h-full mt-0 w-full lg:w-2/4 inset-y-0 inset-x-auto right-0">
+                <div className="p-10 lg:p-28 space-y-8">
                   <div className="flex justify-between items-center">
                     <p className="text-lg">Colors</p>
                     <DrawerClose>
@@ -120,8 +121,8 @@ const ProductDetails = (props: Props) => {
                   <p>Sizes</p> <ChevronRight size={20} strokeWidth={1.5} />
                 </div>
               </DrawerTrigger>
-              <DrawerContent className="h-full mt-0 w-2/4 inset-y-0 inset-x-auto right-0">
-                <div className="p-28 space-y-8">
+              <DrawerContent className="h-full mt-0 w-full lg:w-2/4 inset-y-0 inset-x-auto right-0">
+                <div className="p-10 lg:p-28 space-y-8">
                   <div className="flex justify-between items-center">
                     <p className="text-lg">Sizes</p>
                     <DrawerClose>
@@ -152,8 +153,8 @@ const ProductDetails = (props: Props) => {
                   Place in Cart
                 </Button>
               </DrawerTrigger>
-              <DrawerContent className="h-fit mt-0 w-1/3 inset-y-0 inset-x-auto right-0 py-12">
-                <div className="px-20 space-y-8">
+              <DrawerContent className="h-fit mt-0 w-full lg:w-1/3 inset-y-0 inset-x-auto right-0 py-12">
+                <div className="px-10 lg:px-20 space-y-8">
                   <div className="flex justify-between items-center">
                     <p className="text-lg">Added to Cart</p>
                     <DrawerClose>
@@ -200,7 +201,7 @@ const ProductDetails = (props: Props) => {
                     </div>
                   </div>
                 </div>
-                <DrawerFooter className="px-20">
+                <DrawerFooter className="px-10 lg:px-20">
                   <Button
                     onClick={() => {
                       setSelectedProduct(productDetails);
