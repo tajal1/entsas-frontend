@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="py-10">
-      <div className="w-[90%] mx-auto grid md:grid-cols-4 grid-cols-2 gap-7">
+      <div className="px-2 md:px-12 mx-auto grid md:grid-cols-4 grid-cols-2 gap-7 container">
         <div>
           <p className="text-[.625rem] mb-6">HELP</p>
           <div className="text-[.875rem] flex flex-col gap-5">
@@ -99,7 +99,7 @@ const Footer = () => {
 
       <hr className="my-10" />
 
-      <div className="w-[90%] mx-auto">
+      <div className="px-2 md:px-12 mx-auto container">
         <div className="flex justify-between lg:flex-row flex-col-reverse items-center gap-5 text-[.875rem]">
           <div>
             <p className="flex gap-2">
@@ -115,7 +115,7 @@ const Footer = () => {
               </span>{" "}
             </p>
           </div>
-          <div className="flex gap-7">
+          <div className="flex flex-wrap md:flex-nowrap md:flex-row justify-center md:justify-start gap-5 md:gap-7">
             <Link href={"/"}>Sitemap</Link>
             <Link href={"/"}>Legal Notice</Link>
             <Link href={"/"}>Privacy Policy</Link>
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-center font-extrabold mt-10 text-[24px]">
+      <p className="hidden lg:block text-center font-extrabold mt-10 text-[24px] container">
         LOUIS VUITTON
       </p>
     </div>
