@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="text-[.625rem] mb-6">ABOUT LOUIS VUITTON</p>
+          <p className="text-[.625rem] mb-6">ABOUT Entsas</p>
           <div className="text-[.875rem] flex flex-col gap-5">
             <p>
               <Link href={"/"}>Fashion Shows</Link>
@@ -90,8 +90,8 @@ const Footer = () => {
             <span className="border-b border-b-black">
               <Link href="/">Sign up</Link>
             </span>{" "}
-            for Louis Vuitton emails and receive the latest news from the
-            Maison, including exclusive online pre-launches and new collections.
+            for Entsas emails and receive the latest news from the Maison,
+            including exclusive online pre-launches and new collections.
           </p>
           <Link href="/">Follow Us</Link>
         </div>
@@ -127,7 +127,7 @@ const Footer = () => {
       </div>
 
       <p className="hidden lg:block text-center font-extrabold mt-10 text-[24px] container">
-        LOUIS VUITTON
+        Entsas
       </p>
     </div>
   );

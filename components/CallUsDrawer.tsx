@@ -22,8 +22,8 @@ const CallUsDrawer = (props: CallUsDrawerProps) => {
               </DrawerClose>
             </div>
             <p className="text-sm">
-              Wherever you are, Louis Vuitton Client, Advisors will be delighted
-              to assist you.
+              Wherever you are, Entsas Client, Advisors will be delighted to
+              assist you.
             </p>
             <div className="flex gap-3">
               <Smartphone size={20} strokeWidth={1.5} />

@@ -18,7 +18,7 @@ let cardDataList = [
   },
   {
     id: 2,
-    title: "Louis Vuitton Perfumes",
+    title: "Entsas Perfumes",
     urlText: "Explore the Selection",
     url: "/",
     img: "/images/cardImg.jpg",
@@ -62,7 +62,7 @@ export default function Home() {
       />
       <HeroSection
         img="/images/demoImg3.jpg"
-        title="Louis Vuitton Service"
+        title="Entsas Service"
         buttonTextOne={"Discover"}
       />
     </main>

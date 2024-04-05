@@ -11,8 +11,8 @@ const intrepid = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LOUIS VUITTON",
-  description: "LOUIS VUITTON Official USA Website | LOUIS VUITTON ®",
+  title: "Entsas",
+  description: "Entsas Official USA Website | Entsas ®",
   icons: {
     icon: "/favicon.ico",
   },
