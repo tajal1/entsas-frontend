@@ -11,14 +11,16 @@ type LandingPageCardType = {
 
 const LandingPageCard = ({ img, title, url, urlText }: LandingPageCardType) => {
   return (
-    <Link href={url ?? "/"} className="w-full h-[calc(100vh-500px)] lg:h-[calc(100vh-200px)]">
-      <div className="w-full h-full md:h-80 xl:h-full cursor-pointer space-y-3">
-        <div className="relative w-full h-[85%]">
-          <Image src={img} alt="Image" fill={true} className=" object-cover" />
-        </div>
-        <p className="text-lg font-medium">{title ?? ""}</p>
-        <p className=" underline underline-offset-4">{urlText ?? ""}</p>
-      </div>
+    <Link href={url ?? "/"} className="w-fit h-full cursor-pointer space-y-3">
+      <Image
+        src={img}
+        alt="Image"
+        height={600}
+        width={600}
+        className=" object-cover"
+      />
+      <p className="text-lg font-medium">{title ?? ""}</p>
+      <p className=" underline underline-offset-4">{urlText ?? ""}</p>
     </Link>
   );
 };
