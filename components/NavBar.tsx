@@ -43,9 +43,9 @@ const NavBar = (props: Props) => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center h-20 overflow-hidden">
           <Link href={"/"}>
-            <div className="md:text-3xl font-bold tracking-widest cursor-pointer truncate items-center flex justify-center h-full">
+            <div className="md:text-3xl font-bold tracking-widest cursor-pointer truncate items-center flex justify-center h-full ">
               {/* <div className="h-full w-fit"> */}
               <Image src="/logo.svg" alt="Logo" height={120} width={120} />
               {/* </div> */}
