@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className="h-full w-full">
       <HeroSection
-        img="/images/heroImg.jpg"
+        img="/images/demos-1.jpg"
         category="MEN"
         title="Spring Collection 2024"
         buttonTextOne={"Discover the Collection"}
