@@ -19,12 +19,12 @@ const HeroSection = ({
   buttonTextTwo,
 }: HeroSectionType) => {
   return (
-    <div className=" h-[calc(100vh-70px)] w-full relative group">
-      <Image src={img} alt="Hero Image" fill={true} className=" object-cover" />
-      <div className=" absolute gap-3 right-[50%] left-[50%] flex flex-col justify-center items-center bottom-14 text-white">
+    <div className="h-[calc(100vh-400px)] lg:h-[calc(100vh-70px)] w-full relative group">
+      <Image src={img} alt="Hero Image" fill={true} className="object-cover" />
+      <div className=" absolute gap-3 right-[50%] left-[50%] flex flex-col justify-center items-center bottom-20 md:bottom-14 text-white">
         <p className="text-xs uppercase truncate">{category ?? ""}</p>
         <p className="text-3xl truncate">{title ?? ""}</p>
-        <div className="flex gap-4 h-20 pt-4 ">
+        <div className="flex flex-col md:flex-row gap-4 h-20 pt-4 ">
           {buttonTextOne && (
             <Link href={"/collections"}>
               <Button

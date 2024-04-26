@@ -18,7 +18,7 @@ let cardDataList = [
   },
   {
     id: 2,
-    title: "Louis Vuitton Perfumes",
+    title: "Entsas Perfumes",
     urlText: "Explore the Selection",
     url: "/",
     img: "/images/cardImg.jpg",
@@ -29,12 +29,12 @@ export default function Home() {
   return (
     <main className="h-full w-full">
       <HeroSection
-        img="/images/heroImg.jpg"
+        img="/images/demos-1.jpg"
         category="MEN"
         title="Spring Collection 2024"
         buttonTextOne={"Discover the Collection"}
       />
-      <div className="p-6 flex gap-5 flex-nowrap w-full h-full">
+      <div className="p-6 flex items-center  justify-center flex-col lg:flex-row gap-5  w-full h-fit">
         {cardDataList.map((item, i) => {
           return (
             <LandingPageCard
@@ -62,7 +62,7 @@ export default function Home() {
       />
       <HeroSection
         img="/images/demoImg3.jpg"
-        title="Louis Vuitton Service"
+        title="Entsas Service"
         buttonTextOne={"Discover"}
       />
     </main>

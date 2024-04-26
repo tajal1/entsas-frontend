@@ -38,7 +38,7 @@ const WishlistCard = (item: Props) => {
   return (
     <>
       <AlertDialog open={open} onOpenChange={setIsOpen}>
-        <AlertDialogContent className="top-[50%] p-12">
+        <AlertDialogContent className="top-[50%] w-5/6 lg:w-full p-12">
           <AlertDialogHeader>
             <AlertDialogDescription className="flex justify-between items-center">
               <p className="text-[18px] text-black">Remove from my wishlist</p>
@@ -52,7 +52,7 @@ const WishlistCard = (item: Props) => {
               </p>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-3 lg:flex-row justify-between">
             <AlertDialogCancel className="rounded-full px-16 py-6 border border-black">
               Cancel
             </AlertDialogCancel>
@@ -66,7 +66,7 @@ const WishlistCard = (item: Props) => {
         </AlertDialogContent>
       </AlertDialog>
 
-      <div className=" space-y-3 overflow-hidden gap-4 h-80 w-full relative">
+      <div className="col-span-4 md:col-span-2 lg:col-span-1 space-y-3 overflow-hidden gap-4 h-80 w-full relative">
         <X
           onClick={() => {
             setIsOpen((prevIsLove) => !prevIsLove);
