@@ -25,7 +25,7 @@ const CartContainer = (props: Props) => {
   const selectedProduct = useAppStore((state) => state.selectedProduct);
   const [productDetails, setProductDetails]: any = useState({});
 
-  const [os, setOs] = useState(null);
+  const [os, setOs]:any = useState(null);
 
   useEffect(() => {
     if (navigator && navigator.userAgent) {
