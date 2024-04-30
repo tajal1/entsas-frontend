@@ -25,33 +25,13 @@ const CartContainer = (props: Props) => {
   const selectedProduct = useAppStore((state) => state.selectedProduct);
   const [productDetails, setProductDetails]: any = useState({});
 
-  const [os, setOs]:any = useState(null);
-
-  useEffect(() => {
-    if (navigator && navigator.userAgent) {
-      const userAgent = navigator.userAgent;
-      const mobileOsRegex = /Android|iOS|iPadOS|Windows Phone/i;
-      const osMatch = mobileOsRegex.exec(userAgent);
-
-      if (osMatch) {
-        setOs(osMatch[0]);
-      } else {
-        setOs("Non-Mobile OS");
-      }
-    } else {
-      console.warn(
-        "navigator.userAgent is not available. Mobile OS detection might not work."
-      );
-    }
-  }, []);
-
   useEffect(() => {
     setProductDetails(selectedProduct);
   }, [selectedProduct]);
 
   return (
     <div className=" grid grid-cols-12 ">
-      <div className="container col-span-12 lg:col-span-8 py-10 lg:py-20 px-2 lg:px-12 space-y-2">
+      <div className=" col-span-8 py-20 px-12 space-y-2">
         <p className="flex justify-between pt-5">
           My Shopping Cart{" "}
           <Link href={"/"}>
@@ -61,7 +41,7 @@ const CartContainer = (props: Props) => {
           </Link>
         </p>
         <div className="grid grid-cols-2  bg-white">
-          <div className="p-3 col-span-2 lg:col-span-1">
+          <div className="p-3">
             <Carousel
               opts={{
                 align: "start",
@@ -90,7 +70,7 @@ const CartContainer = (props: Props) => {
               <CarouselNext className="right-5 bg-transparent border-none " />
             </Carousel>
           </div>
-          <div className="border-l col-span-2 lg:col-span-1">
+          <div className="border-l">
             <div className="border-b px-4 py-6">
               <p className="text-xs">{productDetails?.productCode ?? ""}</p>
               <p>{productDetails?.title ?? ""}</p>
@@ -139,7 +119,7 @@ const CartContainer = (props: Props) => {
           </Link>
         </div>
       </div>
-      <div className=" bg-white py-20  col-span-12 lg:col-span-4">
+      <div className=" bg-white py-20  col-span-4">
         <div className="py-8 px-12 space-y-6 border-b">
           <div>
             <p className="flex justify-between">
@@ -162,7 +142,7 @@ const CartContainer = (props: Props) => {
             {" "}
             <Link href={"/checkout"}>
               <Button className="w-full rounded-full py-6">
-              {os && <p>You are on a {os} device.</p>}
+                Proceed to checkout
               </Button>
             </Link>
             <Button className="w-full rounded-full py-6 bg-gradient-to-r from-[#253B80] to-[#179BD7]">
