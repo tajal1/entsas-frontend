@@ -36,10 +36,12 @@ const CartContainer = (props: Props) => {
       if (osMatch) {
         setOs(osMatch[0]);
       } else {
-        setOs('Non-Mobile OS');
+        setOs("Non-Mobile OS");
       }
     } else {
-      console.warn('navigator.userAgent is not available. Mobile OS detection might not work.');
+      console.warn(
+        "navigator.userAgent is not available. Mobile OS detection might not work."
+      );
     }
   }, []);
 
@@ -160,7 +162,7 @@ const CartContainer = (props: Props) => {
             {" "}
             <Link href={"/checkout"}>
               <Button className="w-full rounded-full py-6">
-                Proceed to checkout
+              {os && <p>You are on a {os} device.</p>}
               </Button>
             </Link>
             <Button className="w-full rounded-full py-6 bg-gradient-to-r from-[#253B80] to-[#179BD7]">
@@ -171,8 +173,6 @@ const CartContainer = (props: Props) => {
                 height={23}
               />
             </Button>
-            111
-            {os && <p>You are on a {os} device.</p>}
           </div>
         </div>
       </div>
