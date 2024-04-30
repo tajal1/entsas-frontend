@@ -49,6 +49,8 @@ const CartContainer = (props: Props) => {
     setProductDetails(selectedProduct);
   }, [selectedProduct]);
 
+  console.log(navigator.userAgent,"clg")
+
   return (
     <div className=" grid grid-cols-12 ">
       <div className="container col-span-12 lg:col-span-8 py-10 lg:py-20 px-2 lg:px-12 space-y-2">
